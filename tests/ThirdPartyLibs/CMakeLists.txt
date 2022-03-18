@@ -1,0 +1,1 @@
+add_library_test_open3d(Open3DTests open3d_tests Open3DTests.cpp)

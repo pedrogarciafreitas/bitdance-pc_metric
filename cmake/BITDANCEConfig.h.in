@@ -1,0 +1,11 @@
+#ifndef TextureDescriptorsCONFIG_H__
+#define TextureDescriptorsCONFIG_H__
+
+#define TextureDescriptors_NAME "@TextureDescriptors_NAME@"
+#define TextureDescriptors_VERSION_MAJOR "@TextureDescriptors_VERSION_MAJOR@"
+#define TextureDescriptors_VERSION_MINOR "@TextureDescriptors_VERSION_MINOR@"
+#define TextureDescriptors_VERSION_PATCH "@TextureDescriptors_VERSION_PATCH@"
+
+#define TextureDescriptors_VERSION  "@TextureDescriptors_VERSION_MAJOR@.@TextureDescriptors_VERSION_MINOR@.@TextureDescriptors_VERSION_PATCH@"
+
+#endif /* end of include guard: TextureDescriptorsCONFIG_H__ */
