@@ -25,7 +25,7 @@
 #include <memory>
 #include <thread>
 
-#include <Open3D.h>
+#include "open3d/Open3D.h"
 
 using namespace open3d;
 using namespace std;
@@ -90,15 +90,23 @@ int main(int argc, char *argv[])
 
 
 //    print_pointcloud(*pc, false);
-
-    if ( strstr(argv[2], ".ply" ))
-        io::WritePointCloudToPLY(argv[2], *pc, true, false);
-    if( strstr(argv[2], ".xyz"))
-        io::WritePointCloudToXYZ(argv[2], *pc, true, false);
-    if( strstr(argv[2], ".xyzrgb"))
-        io::WritePointCloudToXYZRGB(argv[2], *pc, true, false);
-    if( strstr(argv[2], ".pcd"))
-        io::WritePointCloudToPCD(argv[2], *pc, true, false);
+    auto opt = io::WritePointCloudOption();
+    if ( strstr(argv[2], ".ply" )){ 
+        // io::WritePointCloudToPLY(argv[2], *pc, true, false);
+        io::WritePointCloudToPLY(argv[2], *pc, opt);
+    }
+    if( strstr(argv[2], ".xyz")){
+        // io::WritePointCloudToXYZ(argv[2], *pc, true, false);
+        WritePointCloudToXYZ(argv[2], *pc, opt);
+    }
+    if( strstr(argv[2], ".xyzrgb")) {
+        // io::WritePointCloudToXYZRGB(argv[2], *pc, true, false);
+        io::WritePointCloudToXYZRGB(argv[2], *pc, opt);
+    }
+    if( strstr(argv[2], ".pcd")) {
+        //io::WritePointCloudToPCD(argv[2], *pc, true, false);
+        io::WritePointCloudToPCD(argv[2], *pc, opt);
+    }
 
     return EXIT_SUCCESS;
 

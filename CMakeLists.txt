@@ -57,7 +57,7 @@ include_directories(source)
 option(BUILD_DOC "Build documentation" OFF)
 
 # # Executables
-#add_subdirectory(${CMAKE_HOME_DIRECTORY}/source/)
+add_subdirectory(${CMAKE_HOME_DIRECTORY}/source/)
 
 
 
