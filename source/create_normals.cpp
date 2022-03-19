@@ -88,12 +88,15 @@ int main(int argc, char *argv[])
 
     pc->OrientNormalsToAlignWithDirection(Eigen::Vector3d(0.0, 0.0, 1.0)); // here we just pick an arbitrary direction
 
+    std::cout << "Trying to write to " << argv[2] << std::endl;
+
 
 //    print_pointcloud(*pc, false);
     auto opt = io::WritePointCloudOption();
     if ( strstr(argv[2], ".ply" )){ 
         // io::WritePointCloudToPLY(argv[2], *pc, true, false);
         io::WritePointCloudToPLY(argv[2], *pc, opt);
+        std::cout << "Writted to " << argv[2] << std::endl;
     }
     if( strstr(argv[2], ".xyz")){
         // io::WritePointCloudToXYZ(argv[2], *pc, true, false);
