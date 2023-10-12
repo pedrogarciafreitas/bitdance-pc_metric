@@ -12,7 +12,7 @@ set(OPEN_CONFIG_CMD  cd ${OPEN3D_SRC_DIR} && mkdir -p build && cd build  && cmak
                        -DGLIBCXX_USE_CXX11_ABI=ON 
                        -DCMAKE_INSTALL_PREFIX=${LIBOPEN3D_INSTALL} .. )
 set(OPEN3D_BUILD_CMD  cd ${OPEN3D_BUILD_DIR} &&  make)
-set(OPEN3D_INSTALL_CMD cd ${OPEN3D_BUILD_DIR} && make install && mv ${LIBOPEN3D_INSTALL}/lib64 ${LIBOPEN3D_INSTALL}/lib)
+#set(OPEN3D_INSTALL_CMD cd ${OPEN3D_BUILD_DIR} && make install && mv ${LIBOPEN3D_INSTALL}/lib64 ${LIBOPEN3D_INSTALL}/lib)
 
 ExternalProject_Add(
     Open3D
